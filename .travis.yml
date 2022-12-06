@@ -1,5 +1,5 @@
 language: android
-jdk: oraclejdk8
+jdk: oraclejdk11
 android:
   components:
     - platform-tools
@@ -10,7 +10,7 @@ android:
 
 
     # The SDK version used to compile your project
-    - android-23
+    - android-33
 
     # Support library
     - extra-android-support
@@ -22,5 +22,5 @@ android:
     - 'google-gdk-license-.+'
 
 script:
-  - ./gradlew build
+  - android list target
 
