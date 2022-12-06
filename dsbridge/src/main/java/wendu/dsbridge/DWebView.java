@@ -12,8 +12,8 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.Keep;
-import android.support.v7.app.AlertDialog;
+//import android.support.annotation.Keep;
+//import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -33,6 +33,9 @@ import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+
+import androidx.annotation.Keep;
+import androidx.appcompat.app.AlertDialog;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -255,11 +258,11 @@ public class DWebView extends WebView {
             settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
         settings.setAllowFileAccess(false);
-        settings.setAppCacheEnabled(false);
+//        settings.setAppCacheEnabled(false);
         settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         settings.setJavaScriptEnabled(true);
         settings.setLoadWithOverviewMode(true);
-        settings.setAppCachePath(APP_CACHE_DIRNAME);
+//        settings.setAppCachePath(APP_CACHE_DIRNAME);
         settings.setUseWideViewPort(true);
         super.setWebChromeClient(mWebChromeClient);
         addInternalJavascriptObject();
@@ -817,13 +820,13 @@ public class DWebView extends WebView {
             }
         }
 
-        @Override
-        public void onReachedMaxAppCacheSize(long requiredStorage, long quota, WebStorage.QuotaUpdater quotaUpdater) {
-            if (webChromeClient != null) {
-                webChromeClient.onReachedMaxAppCacheSize(requiredStorage, quota, quotaUpdater);
-            }
-            super.onReachedMaxAppCacheSize(requiredStorage, quota, quotaUpdater);
-        }
+//        @Override
+//        public void onReachedMaxAppCacheSize(long requiredStorage, long quota, WebStorage.QuotaUpdater quotaUpdater) {
+//            if (webChromeClient != null) {
+//                webChromeClient.onReachedMaxAppCacheSize(requiredStorage, quota, quotaUpdater);
+//            }
+//            super.onReachedMaxAppCacheSize(requiredStorage, quota, quotaUpdater);
+//        }
 
         @Override
         public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
