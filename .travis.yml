@@ -1,6 +1,6 @@
 language: android
 #jdk: oraclejdk17
-#jdk: openjdk17
+jdk: openjdk17
 android:
   components:
     - platform-tools
