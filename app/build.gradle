@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdk 33
-    buildToolsVersion '32.0.0'
     defaultConfig {
         applicationId "wendu.jsbdemo"
         minSdkVersion 21

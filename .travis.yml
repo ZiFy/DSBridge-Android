@@ -1,12 +1,13 @@
 language: android
-jdk: oraclejdk17
+#jdk: oraclejdk17
+#jdk: openjdk17
 android:
   components:
     - platform-tools
     - tools
 
     # The BuildTools version used by your project
-    - build-tools-26.0.2
+    - build-tools-32.0.0
 
 
     # The SDK version used to compile your project
